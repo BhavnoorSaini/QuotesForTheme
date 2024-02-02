@@ -17,6 +17,7 @@ git clone <repo-url>
 ## Dependencies
 
 - ADD DEPENDENCIES _---------------------------------------------------------------_
+- NLKT
 - Node.js
 - Express.js
 - MongoDB
