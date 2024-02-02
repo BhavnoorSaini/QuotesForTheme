@@ -13,14 +13,16 @@ git clone <repo-url>
 2. Navigate to the project directory.
 3. Install dependencies.
 4. Execute main.py in terminal
+```bash
+python main.py
+```
 
 ## Dependencies
 
-- ADD DEPENDENCIES _---------------------------------------------------------------_
-- NLKT
-- Node.js
-- Express.js
-- MongoDB
+```bash
+pip install -r requirements.txt
+```
+- All dependencies are found in the `requirements.txt` file
 
 ## Usage
 
