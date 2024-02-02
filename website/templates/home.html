@@ -1,0 +1,30 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
+    %}
+
+    <h1 align="center" style="font-weight: bold;">Quotes for Theme</h1>
+
+    <ul class="list-group list-group-flush" id="notes">
+      {% for quote in user.quotes %}
+      <li class="list-group-item">
+        {{ quote.data }}
+        <button type="button" class="close" onClick="deleteNote({{ quote.id }})">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </li>
+      {% endfor %}
+    </ul>
+
+    <form method="POST">
+      <br />
+      <h1 align="center" style="font-size: 20px">Enter Theme:</h1>
+      <textarea name="theme" id="theme" class="form-control"></textarea>
+      <br />
+      <h1 align="center" style="font-size: 20px">Enter URL:</h1>
+      <textarea name="url" id="url" class="form-control"></textarea>
+      <br />
+      <div align="center">
+        <button type="submit" class="btn btn-primary">SEARCH</button>
+      </div>
+    </form>
+    {% endblock %}
+
