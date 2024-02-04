@@ -3,6 +3,7 @@ from flask_login import login_required, current_user
 from .models import Quote
 from . import db
 import json
+from . import QuoteMatcher
 
 views = Blueprint('views', __name__)
 
@@ -11,12 +12,20 @@ views = Blueprint('views', __name__)
 @login_required
 def home():
     if request.method == 'POST': 
-        theme = request.form.get('theme')#Gets theme from HTML 
-        url = request.form.get('url')
-        # print(theme)
-        # print(url)
+        theme = request.form.get('theme') # Get theme from HTML 
+        url = request.form.get('url') # Get url from HTML
 
-        quote = "Hello" # This is output
+        # Calls and initalizes QuoteMatcherClass
+        quote_matcher = QuoteMatcher.QuoteMatcherClass(url, theme)
+        # Runs the quote search algorithm from class and stores quote that best supports theme
+        matched_quote = quote_matcher.run()
+
+        # If there is a quote that matches the theme, then output it to the program
+        if matched_quote is not None:
+            quote = matched_quote
+        else:
+            # Else output this statement to the program
+            quote = "No quotes found."
 
         if len(theme) < 1:
             flash('Theme is too short!', category='error') 
