@@ -1,4 +1,9 @@
 flask
-Flask-SQLAlchemy
-flask-login
-NLKT
+flask_sqlalchemy
+flask_login
+wekzeug
+requests
+bs4
+nltk
+sentence_transformers
+torch
