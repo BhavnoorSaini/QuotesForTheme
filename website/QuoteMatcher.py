@@ -16,7 +16,7 @@ class QuoteMatcherClass:
         self.url = url
         self.theme = theme
         # Initialize the model
-        self.model = SentenceTransformer('all-MiniLM-L6-v2')
+        self.model = SentenceTransformer('all-MiniLM-L6-v2') # Pre-trained model
 
     def get_quotes(self):
         page = requests.get(self.url)
