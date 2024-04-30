@@ -35,7 +35,7 @@ Here's how you can use the project:
 
 ## Configuration
 
-The quote search algorithm can be configured by editing the `filterQuote.py` file, the website template can be edited from the files found in the `templates` folder. You can adjust settings such as changing the sentiment score or chaning the quote filtering algorith as a whole.
+The quote search algorithm can be configured by editing the `QuoteMatcher.py` file, the website template can be edited from the files found in the `templates` folder. You can adjust settings such as changing the sentiment score or chaning the quote filtering algorith as a whole.
 
 ## Contributing
 
